@@ -1,9 +1,11 @@
 .breed-select {
   position: absolute;
-  top: 30px;
-  left: 50%;
+  top: 5%;
+  left: 45%;
+  transform: translate(-5%, -50%);
   z-index: 200;
-  /* box-shadow: 0 0 15px #9e7d35; */
+  width: 250px;
+  box-shadow: 0 0 15px #9e7d35;
 }
 
 .container {
@@ -17,6 +19,10 @@
   z-index: 101;
   border-radius: 5%;
   box-shadow: 0 0 15px #9e7d35;
+}
+
+.intro {
+  text-align: left;
 }
 
 .cat-info {
@@ -105,4 +111,49 @@
 }
 .close-btn:hover .cl-btn-6-in:after {
   bottom: 0;
+}
+
+/* Select */
+.breed-select {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+}
+
+.breed-select option {
+  color: #000000;
+}
+
+.breed-select:hover,
+.breed-select:active,
+.breed-select:focus {
+  background-color: #0979ce;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* loader */
+.loader {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 505;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: -72px 0 #fff inset;
+  }
+  100% {
+    box-shadow: 48px 0 #fff inset;
+  }
 }

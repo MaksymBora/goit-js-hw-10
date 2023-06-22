@@ -7,6 +7,7 @@ function getRefs() {
     closeButton: document.querySelector('.close-btn'),
     content: document.querySelector('.content'),
     container: document.querySelector('.container'),
+    selectMenu: document.querySelector('.ss-main'),
   };
 }
 

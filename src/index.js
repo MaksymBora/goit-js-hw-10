@@ -1,6 +1,7 @@
 import API from './js/cat-api';
 import getRefs from './js/get-refs';
 import getOptions from './js/get-options';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = getRefs();
 
@@ -74,7 +75,9 @@ function hideLoadingMessage() {
 
 //Show error
 function showError() {
-  refs.errorMessage.style.display = 'block';
+  // refs.errorMessage.style.display = 'block';
+
+  Notify.failure(' Oops! Something went wrong! Try reloading the page!');
 }
 
 // Remove all childs from .cat-info
