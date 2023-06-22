@@ -2,6 +2,8 @@
   position: absolute;
   top: 30px;
   left: 50%;
+  z-index: 200;
+  /* box-shadow: 0 0 15px #9e7d35; */
 }
 
 .container {
@@ -10,8 +12,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: rgba(165, 240, 161, 0.05);
+  background-color: rgba(1, 1, 200, 0.05);
   display: none;
+  z-index: 101;
+  border-radius: 5%;
+  box-shadow: 0 0 15px #9e7d35;
 }
 
 .cat-info {
@@ -29,6 +34,7 @@
   border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0px -0px 8px 0px rgba(241, 245, 162, 0.47);
 }
 
 .close-btn {
@@ -38,8 +44,65 @@
 }
 
 .cat-info {
+  color: #fff;
   font-size: 16px;
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
+}
+
+/* ------ Button Close ------- */
+
+.close-btn {
+  position: absolute;
+  width: 40px;
+  cursor: pointer;
+  top: 25px;
+  right: 25px;
+}
+.cl-btn-6-in {
+  width: inherit;
+  text-align: center;
+}
+.cl-btn-6-txt {
+  font-size: 10px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e7e7e0;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+  font-family: Verdana;
+}
+.cl-btn-6-in:before,
+.cl-btn-6-in:after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: inherit;
+  background: #e7e7e0;
+  left: 0;
+  transition: all 0.3s ease-in;
+}
+.cl-btn-6-in:before {
+  top: calc(50% - 4px);
+  transform: rotate(45deg);
+}
+.cl-btn-6-in:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+.close-btn:hover .cl-btn-6-txt {
+  opacity: 1;
+}
+.close-btn:hover .cl-btn-6-in:before,
+.close-btn:hover .cl-btn-6-in:after {
+  transform: rotate(0);
+}
+.close-btn:hover .cl-btn-6-in:before {
+  top: 0;
+}
+.close-btn:hover .cl-btn-6-in:after {
+  bottom: 0;
 }
