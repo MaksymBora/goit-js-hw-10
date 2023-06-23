@@ -36,7 +36,9 @@ function selectedBreeds() {
   const selectedValue = refs.select.options[refs.select.selectedIndex];
   const selectedText = selectedValue.textContent;
 
-  return selectedText;
+  const selectedId = selectedValue.value;
+
+  return selectedId;
 }
 
 // Create Markup
