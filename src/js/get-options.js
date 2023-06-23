@@ -19,7 +19,7 @@ function getAllIds(arr) {
 
   for (let i = 0; i < arr.length; i += 1) {
     let value = arr[i].id;
-    let text = arr[i].name;
+    let text = arr[i].id;
 
     const optionsElement = document.createElement('option');
     optionsElement.value = value;
