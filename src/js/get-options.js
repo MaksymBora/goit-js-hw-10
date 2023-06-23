@@ -1,9 +1,8 @@
 import API from './cat-api';
-import getRefs from './get-refs';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import Notiflix from 'notiflix';
+import { Report } from 'notiflix/build/notiflix-notify-aio';
 
-const refs = getRefs();
-
+// fetching API and adding <options> in select
 function createOptions() {
   API.fetchBreeds()
     .then(getAllIds)
@@ -16,7 +15,6 @@ function createOptions() {
 
 // Add all ids in select ".breed-select"
 function getAllIds(arr) {
-  //test
   const breedSelect = document.querySelector('.breed-select');
 
   for (let i = 0; i < arr.length; i += 1) {
@@ -32,7 +30,11 @@ function getAllIds(arr) {
 
 //Show error
 function showError() {
-  Notify.failure(' Oops! Something went wrong! Try reloading the page!');
+  Notiflix.Report.failure(
+    'Error',
+    'Oops! Something went wrong! Try reloading the page!',
+    'Try Again'
+  );
 }
 
 export default createOptions;

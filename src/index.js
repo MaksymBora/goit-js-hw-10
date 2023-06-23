@@ -18,7 +18,6 @@ function onSelectView() {
 
   if (isContent) {
     clearCatContainer();
-    refs.container.classList.add('is-active');
   }
   // Show loading message
   showLoadingMessage();
@@ -28,7 +27,8 @@ function onSelectView() {
     .catch(showError)
     .finally(hideLoadingMessage);
 
-  refs.container.style.display = 'block';
+  // add is-active class for modal window
+  refs.container.classList.add('is-active');
 }
 
 // Getting Breed from Select
@@ -53,9 +53,9 @@ function markUp(arr) {
   const markUp = `
   
 
-    <img class="img-cat" src="${imgUrl}">
+    <img class="img-cat" src="${imgUrl}" width="440" height="400" loading="lazy">
     <div class="intro">
-      <p class="cat-info"><b>Description:</b>${catDesc}</p>
+      <p class="cat-info"><b>Description: </b>${catDesc}</p>
       <p class="cat-info"><b>Temperament: </b>${catTemp}</p>
     </div>
   `;

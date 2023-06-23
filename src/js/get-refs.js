@@ -1,3 +1,4 @@
+// all selectors
 function getRefs() {
   return {
     select: document.querySelector('.breed-select'),
