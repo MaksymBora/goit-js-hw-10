@@ -15,7 +15,7 @@ export function getAllIds(arr) {
     breedSelect.appendChild(optionsElement);
   }
 
-  new SlimSelect({
-    select: '.breed-select',
-  });
+  // new SlimSelect({
+  //   select: '.breed-select',
+  // });
 }
