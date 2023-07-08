@@ -11,12 +11,4 @@ export function getAllIds(arr) {
     optionsElement.textContent = text;
     breedSelect.appendChild(optionsElement);
   }
-<<<<<<< HEAD
-
-  // new SlimSelect({
-  //   select: '.breed-select',
-  // });
-=======
->>>>>>> parent of db84d38 (update select, add SlimSelect)
 }
-// test
