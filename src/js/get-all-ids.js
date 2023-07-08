@@ -1,3 +1,6 @@
+import SlimSelect from 'slim-select';
+import 'slim-select/dist/slimselect.css';
+
 // Add all ids in select ".breed-select"
 export function getAllIds(arr) {
   const breedSelect = document.querySelector('.breed-select');
@@ -11,4 +14,8 @@ export function getAllIds(arr) {
     optionsElement.textContent = text;
     breedSelect.appendChild(optionsElement);
   }
+
+  new SlimSelect({
+    select: '.breed-select',
+  });
 }
