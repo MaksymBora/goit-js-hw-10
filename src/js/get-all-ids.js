@@ -1,5 +1,5 @@
-import SlimSelect from 'slim-select';
-import 'slim-select/dist/slimselect.css';
+// import SlimSelect from 'slim-select';
+// import 'slim-select/dist/slimselect.css';
 
 // Add all ids in select ".breed-select"
 export function getAllIds(arr) {
@@ -15,7 +15,7 @@ export function getAllIds(arr) {
     breedSelect.appendChild(optionsElement);
   }
 
-  new SlimSelect({
-    select: '.breed-select',
-  });
+  // new SlimSelect({
+  //   select: '.breed-select',
+  // });
 }
